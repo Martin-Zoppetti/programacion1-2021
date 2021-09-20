@@ -1,6 +1,6 @@
 <?php
 
-echo("<h1> Hola Mundo </h1>");
+echo("<h1 style="color:red"; > Hola Mundo </h1>");
 
-echo("<h2> Hola Juancarlos </h2>");
+echo("<h2style="color:orange";> Hola Juancarlos </h2>");
 ?>
