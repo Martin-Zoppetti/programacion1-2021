@@ -14,3 +14,4 @@ int setNombre(char* nombre, int opcion);
 int controller_imprimirAutorSinRepetir(LinkedList* pLinkedListElementos);
 LinkedList* controller_ll_filterAutor( LinkedList* pListaLibros);
 LinkedList* controller_ll_filter( LinkedList* pListaLibros);
+int seleccionarAutor(LinkedList* pLinkedListElementos);

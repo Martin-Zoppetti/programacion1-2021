@@ -10,7 +10,6 @@ int main()
 	setbuf(stdout,NULL);
 
 	int option = 0;
-	int cargaDeAchivoMapeado=0;
 	int cargaDeAchivoDatos=0;
 
 	char confirmar;
@@ -72,7 +71,6 @@ int main()
 				if(listalibrosMapeados!=NULL){
 						printf("Descuentos aplicados con exito!!!\n");
 					cargaDeAchivoDatos = 0;
-					cargaDeAchivoMapeado = 1;
 				}
 				else{
 					printf("No se pudieron aplicar los descuentos.\n");
@@ -91,14 +89,14 @@ int main()
 				controller_Listlibro(listalibrosMapeados);
 
 
-seleccionarAutor(listalibrosMapeados);
-listalibrosAutor=controller_ll_filterAutor(listalibrosMapeados);
-controller_generadorDeArchivos("Autores.csv", listalibrosAutor);
-controller_Listlibro(listalibrosAutor);
-listalibrosEditoriales=controller_ll_filter(listalibrosAutor);
-controller_generadorDeArchivos("minotauroLibros.csv", listalibrosEditoriales);
+				seleccionarAutor(listalibrosMapeados);
+				listalibrosAutor=controller_ll_filterAutor(listalibrosMapeados);
+				controller_generadorDeArchivos("Autores.csv", listalibrosAutor);
+				controller_Listlibro(listalibrosAutor);
+				listalibrosEditoriales=controller_ll_filter(listalibrosAutor);
+				controller_generadorDeArchivos("minotauroLibros.csv", listalibrosEditoriales);
 
-controller_Listlibro(listalibrosEditoriales);
+				controller_Listlibro(listalibrosEditoriales);
 
 
 			}
