@@ -66,7 +66,7 @@ return retorno;
 
 
 int setNombre(char* nombre, int opcion){
-	static char nombreaux[20]="";
+	static char nombreaux[50]="";
 	int retorno=0;
 
 	if(nombre!=NULL && (opcion==1 || opcion==2) ){
@@ -304,102 +304,4 @@ LinkedList* controller_ll_filterAutor( LinkedList* pListaLibros){
 
 	return retorno;
 }
-/*int controller_ll_map(char* path , LinkedList* pListaLibros){
-	int retorno = 0;
-	int id;
-	char titulo[128];
-	char autor[128];
-	int precio;
-	char editorial[128];
-
-	LinkedList* listaMapeada;
-	FILE* pFile;
-	eLibro* auxLibro;
-	if(pListaLibros != NULL)
-	{
-		listaMapeada = ll_map(pListaLibros,calcularDescuento);
-		if(listaMapeada != NULL){
-			pFile  = fopen(path,"w");
-			if(pFile != NULL)
-			{
-				//Escritura fantasma
-				fprintf(pFile,"id,Titulo,Autor,Precio,Editorial\n");
-
-				for(int i = 0;i<ll_len(listaMapeada);i++)
-				{
-					auxLibro = (eLibro*) ll_get(listaMapeada,i);
-					if(auxLibro != NULL)
-					{
-						if(libro_getId(auxLibro,&id) &&
-								libro_getTitulo(auxLibro,titulo)&&
-								libro_getAutor(auxLibro,autor)&&
-								libro_getPrecio(auxLibro,&precio) &&
-								libro_getEditorial(auxLibro,editorial))
-						{
-							fprintf(pFile,"%d,%s,%s,%d,%s\n",id,titulo,autor,precio,editorial);
-							retorno = 1;
-							printf("exito");
-						}
-					}
-				}
-			}
-			else
-			{
-				printf("No se pudo escribir en el archivo \n");
-			}
-			fclose(pFile);
-		}
-	}
-	return retorno;
-}*/
-
-/*int controller_ll_filter(char* path , LinkedList* pListaLibros){
-	int retorno = 0;
-	int id;
-	char titulo[128];
-	char autor[128];
-	int precio;
-	char editorial[128];
-
-	LinkedList* listaFiltrada;
-	FILE* pFile;
-	eLibro* auxLibro;
-	if(pListaLibros != NULL)
-	{
-		listaFiltrada = ll_filter(listaFiltrada, pFunc);
-		if(listaFiltrada != NULL){
-			pFile  = fopen(path,"w");
-			if(pFile != NULL)
-			{
-				//Escritura fantasma
-				fprintf(pFile,"id,Titulo,Autor,Precio,Editorial\n");
-
-				for(int i = 0;i<ll_len(listaFiltrada);i++)
-				{
-					auxLibro = (eLibro*) ll_get(listaFiltrada,i);
-					if(auxLibro != NULL)
-					{
-						if( libro_getId(auxLibro,&id) &&
-							libro_getTitulo(auxLibro,titulo)&&
-							libro_getAutor(auxLibro,autor)&&
-							libro_getPrecio(auxLibro,&precio) &&
-							libro_getEditorial(auxLibro,editorial))
-						{
-							fprintf(pFile,"%d,%s,%s,%d,%s\n",id,titulo,autor,precio,editorial);
-							retorno = 1;
-						}
-					}
-				}
-			}
-			else
-			{
-				printf("No se pudo escribir en el archivo \n");
-			}
-			fclose(pFile);
-		}
-
-	}
-	return retorno;
-}*/
-
 
