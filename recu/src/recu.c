@@ -88,7 +88,7 @@ int main()
 
 				controller_Listlibro(listalibrosMapeados);
 
-
+printf("Seleccione un autor:\n");
 				seleccionarAutor(listalibrosMapeados);
 				listalibrosAutor=controller_ll_filterAutor(listalibrosMapeados);
 				controller_generadorDeArchivos("Autores.csv", listalibrosAutor);
