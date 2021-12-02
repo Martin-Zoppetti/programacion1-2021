@@ -280,7 +280,7 @@ LinkedList* controller_ll_filter( LinkedList* pListaLibros){
 	LinkedList* listaFiltrada=NULL;
 	if(pListaLibros != NULL)
 	{
-		listaFiltrada = ll_filter(listaFiltrada, filtroEitorial);
+		listaFiltrada = ll_filter(pListaLibros, filtroEitorial);
 		if(listaFiltrada!=NULL){
 			retorno=listaFiltrada;
 		}
@@ -296,7 +296,7 @@ LinkedList* controller_ll_filterAutor( LinkedList* pListaLibros){
 	LinkedList* listaFiltrada=NULL;
 	if(pListaLibros != NULL)
 	{
-		listaFiltrada = ll_filter(listaFiltrada, filtroAutor);
+		listaFiltrada = ll_filter(pListaLibros, filtroAutor);
 		if(listaFiltrada!=NULL){
 			retorno=listaFiltrada;
 		}

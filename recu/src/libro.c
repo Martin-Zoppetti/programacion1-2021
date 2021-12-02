@@ -175,7 +175,7 @@ int filtroEitorial (void* element){
 		eLibro* aux=(eLibro*) element;
 
 
-		libro_getEditorial(element, auxiliar);
+		libro_getEditorial(aux, auxiliar);
 		if(strcmp(auxiliar,editorialAux)==0)
 		{
 			retorno = 1;
@@ -187,14 +187,12 @@ int filtroEitorial (void* element){
 int filtroAutor(void* element){
 	int retorno=0;
 
-
 	char auxiliar[128];
 	char AutorAux[128];
 	if(element!=NULL){
 		eLibro* aux=(eLibro*) element;
-
 		setNombre(AutorAux, 2);
-		libro_getEditorial(element, auxiliar);
+		libro_getAutor(aux, auxiliar);
 		if(strcmp(auxiliar,AutorAux)==0)
 		{
 			retorno = 1;
